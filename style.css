@@ -1,0 +1,571 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5ef;
+    color: #1c2b24;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 22px 0;
+    color: white;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.logo span,
+.footer-logo span {
+    color: #d5a84d;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+nav a:hover {
+    color: #e0b65e;
+}
+
+.nav-button {
+    border: 1px solid rgba(255, 255, 255, .6);
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 30, 22, .82),
+            rgba(10, 30, 22, .38)
+        ),
+        url("images/hero.jpg") center/cover no-repeat;
+
+    color: white;
+}
+
+.hero-content {
+    padding-top: 60px;
+}
+
+.small-title {
+    color: #c99b43;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 8vw, 90px);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero h1 span,
+.section-heading span,
+.culture-content h2 span,
+.cta h2 span {
+    color: #d4a84f;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 500px;
+    color: #e4e8e5;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.primary {
+    background: #d4a84f;
+    color: #17251e;
+}
+
+.secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.primary:hover {
+    background: #e4bd67;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    max-width: 700px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+.section-heading > p:last-child {
+    color: #68736c;
+    max-width: 560px;
+}
+
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination-card {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ddd;
+}
+
+.destination-card img {
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+.destination-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0, 0, 0, .8)
+    );
+}
+
+.card-content {
+    position: absolute;
+    z-index: 2;
+    bottom: 22px;
+    left: 22px;
+    color: white;
+}
+
+.card-content p {
+    color: #e1bd70;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin: 4px 0;
+}
+
+.card-content span {
+    font-size: 12px;
+}
+
+
+/* =========================
+   EXPERIENCES
+========================= */
+
+.experiences {
+    padding: 100px 0;
+    background: #183b2c;
+    color: white;
+}
+
+.light h2 {
+    color: white;
+}
+
+.light > p:last-child {
+    color: #b9c5be;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.experience-card {
+    padding: 30px;
+    min-height: 220px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.experience-card:hover {
+    background: rgba(255, 255, 255, .06);
+    transform: translateY(-4px);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.experience-card h3 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.experience-card p {
+    color: #bbc7c0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture {
+    padding: 110px 0;
+}
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.culture-image img {
+    height: 520px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.culture-content h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+
+.culture-content > p {
+    color: #69736d;
+    max-width: 500px;
+}
+
+.culture-list {
+    margin-top: 30px;
+}
+
+.culture-list div {
+    display: flex;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ddd8ca;
+}
+
+.culture-list strong {
+    color: #b1843c;
+}
+
+.culture-list span {
+    font-size: 14px;
+}
+
+
+/* =========================
+   TRAVEL GUIDE
+========================= */
+
+.guide {
+    padding: 100px 0;
+    background: #eee9dd;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center > p:last-child {
+    margin: auto;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.guide-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+}
+
+.guide-card > span {
+    color: #bd8d38;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.guide-card h3 {
+    margin: 15px 0 8px;
+}
+
+.guide-card p {
+    color: #6d756f;
+    font-size: 13px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 110px 0;
+    text-align: center;
+    background: #dfe5d9;
+}
+
+.cta h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 65px);
+    line-height: 1.05;
+    margin: 15px 0 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 65px 0 20px;
+    background: #10271d;
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.footer-grid p {
+    color: #aebbb3;
+    max-width: 320px;
+    font-size: 13px;
+}
+
+.footer-grid h4 {
+    color: #d4a84f;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-grid a {
+    display: block;
+    color: #b6c1ba;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-grid a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    margin-top: 50px;
+    padding-top: 18px;
+    color: #84938a;
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .section,
+    .experiences,
+    .culture,
+    .guide {
+        padding: 75px 0;
+    }
+
+    .destination-grid,
+    .experience-grid,
+    .guide-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 320px;
+    }
+
+    .culture-image img {
+        height: 350px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
